@@ -1,0 +1,82 @@
+/* styles.css 
+   Project: 
+   Author: 
+   Date: 
+	
+   Helpful links: 
+   	Web colors: 
+   		https://en.wikipedia.org/wiki/Web_colors#X11_color_names
+	Color picker tool:
+		https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool
+		http://colorpicker.com
+
+*/
+
+#rotate {
+	border-radius: 50%;
+	-webkit-transform: rotate(-25deg);
+	transform: rotate(-25deg);
+}
+
+#scale { /* beginning state of my animation */
+	-webkit-transform: scale(0.3) rotate(30deg);
+	transform: scale(0.3) rotate(30deg);
+	opacity: 0.4;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+#scale:hover { /* end state of my animation */
+	opacity: 1;
+	-webkit-transform: scale(1.2) rotate(270deg);
+	transform: scale(1.2) rotate(270deg);
+}
+
+/* styles for rollover caption */
+
+.rollover {
+	position: relative;
+	width: 600px;
+	height: 400px;
+	overflow: hidden;
+}
+
+.caption {
+	background: rgba(126, 35, 222, 0.6);
+	color: #fff;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	position: absolute;
+	bottom: 400px;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+}
+
+.rollover:hover .caption {
+	bottom: 0;
+}
+
+.caption-opacity {
+	background: rgba(126, 35, 222, 0.6);
+	/* this is for having a transparent background without affecting the opacity of the content. to get rgb value, you can either use photoshop or colorpicker.com and look for the R, G, B values to the right of the color picker. a stands for alpha channel, and controls opacity. */
+	color: #fff;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+}
+
+.rollover:hover .caption-opacity {
+	opacity: 1;
+}
+
+
+
+
+
+
